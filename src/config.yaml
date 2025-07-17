@@ -1,6 +1,6 @@
 site:
-  name: AstroWind
-  site: 'https://astrowind.vercel.app'
+  name: Epheia
+  site: 'https://epheia.ai'
   base: '/'
   trailingSlash: false
 
@@ -9,18 +9,14 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: AstroWind
-    template: '%s — AstroWind'
-  description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
+  default: Epheia - Pioneering Ephemeral Zero-Retention AI
+  template: '%s — Epheia'
+  description: "Empowering healthcare with adaptive AI that processes sensitive data in real-time without storing raw inputs. Secure, compliant, and innovative for telemedicine, mental health analytics, and beyond."
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: AstroWind
-    images:
-      - url: '~/assets/images/default.png'
-        width: 1200
-        height: 628
+    site_name: Epheia
     type: website
   twitter:
     handle: '@onwidget'
