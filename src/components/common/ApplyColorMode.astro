@@ -20,14 +20,15 @@ import { UI } from 'astrowind:config';
     }
   }
 
-  if ((defaultTheme && defaultTheme.endsWith(':only')) || (!localStorage.theme && defaultTheme !== 'system')) {
-    applyTheme(defaultTheme.replace(':only', ''));
-  } else if (
-    localStorage.theme === 'dark' ||
-    (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
-  ) {
-    applyTheme('dark');
-  } else {
-    applyTheme('light');
+  // Force light mode always
+  applyTheme('light');
+  
+  // Override any localStorage settings
+  if (localStorage.theme) {
+    localStorage.removeItem('theme');
   }
+  
+  // Ensure light mode persists
+  document.documentElement.classList.remove('dark');
+  document.documentElement.style.colorScheme = 'light';
 </script>

@@ -1,0 +1,22 @@
+# Query: linkedin
+# ContextLines: 1
+
+8 results - 3 files
+
+src/navigation.ts:
+  124    socialLinks: [
+  126      { ariaLabel: 'X', icon: 'tabler:brand-x', href: 'https://x.com/epheiaai?s=21&t=ilfdQ3AaaMK_1aro6wuhwg' },
+
+src/components/common/BasicScripts.astro:
+  79            break;
+  80:         case 'linkedin':
+  81:           href = `https://www.linkedin.com/shareArticle?mini=true&url=${url}&title=${text}`;
+  82            break;
+
+src/components/common/SocialShare.astro:
+  33      class="ml-2 rtl:ml-0 rtl:mr-2"
+  34:     title="Linkedin Share"
+  35:     data-aw-social-share="linkedin"
+  36      data-aw-url={url}
+
+  38      ><Icon

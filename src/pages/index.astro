@@ -22,25 +22,25 @@ const metadata = {
   <!-- Hero Widget ******************* -->
 
   <Hero
-  actions={[
-    {
-      variant: 'primary',
-      text: 'Sign Up for Updates',
-      href: '#newsletter',
-      icon: 'tabler:mail',
-    },
-  ]}
+actions={[
+  {
+    variant: 'primary',
+    text: 'Sign Up for Updates',
+    href: '/contact',
+    icon: 'tabler:mail',
+  },
+]}
 >
 <Fragment slot="title">
-  <span class="text-[#1e3a5f]">Pioneering Ephemeral Zero-Retention AI for Ethical Medicine</span>
+  <span class="text-[#1e3a5f]">Ephemeral Zero-Retention AI for Ethical Medicine</span>
 </Fragment>
 
   <Fragment slot="subtitle">
     <span class="text-xl font-semibold text-gray-900 dark:text-gray-100">
-      Empowering healthcare with adaptive AI that processes sensitive data in real-time—without storing raw inputs.
+     Adaptive in real time, never storing raw inputs
     </span>
     <span class="block mt-3 text-lg">
-      Secure, compliant, and innovative for telemedicine, mental health analytics, and beyond.
+      Secure, innovative, and HIPAA/GDPR‑ready designed for telemedicine, mental health analytics, and beyond.
     </span>
   </Fragment>
 </Hero>
@@ -50,16 +50,16 @@ const metadata = {
   id="about"
   tagline="About Epheia"
   title="Transforming Medicine Through Ephemeral AI"
-  content="At Epheia, we're a healthcare startup transforming medicine through ephemeral AI that prioritizes ethics and privacy. Our zero-retention framework ensures no raw data persists beyond sessions, enabling adaptive analytics for telemedicine, mental health, and EHR—while fully complying with HIPAA and GDPR."
+  content="We’re building ephemeral, zero‑retention AI that puts ethics and privacy first. No raw data survives beyond a session, yet adaptive analytics still power telemedicine, mental‑health and EHR use cases."
   items={[
     {
       title: 'Founded by Vincent Giacomo',
-      description: 'Inventor of zero-retention AI frameworks (patent-pending) and med school applicant bridging tech and ethical care.',
+      description: '<ul class="list-disc list-inside space-y-2"><li>Inventor of Epheia’s zero‑retention AI framework (12 provisional patents)</li><li>Holds a Master\'s in Biomedical Sciences from Geisinger Commonwealth School of Medicine and is committed to delivering patient‑centric, ethical, and innovative AI‑driven care</li></ul>',
       icon: 'tabler:user',
     },
     {
       title: 'Our Mission',
-      description: 'Innovating for a future where AI enhances medicine without compromising patient trust.',
+      description: '<ul class="list-disc list-inside space-y-2"><li>Advance medicine with AI that earns and protects patient trust</li></ul>',
       icon: 'tabler:target',
     },
   ]}
@@ -75,12 +75,12 @@ const metadata = {
   <Features
   id="technology"
   tagline="Technology"
-  title="Key Differentiators"
-  subtitle="Patent-pending technology designed for healthcare's unique privacy needs"
+  title="Why Our Tech is Different"
+  subtitle="Patent‑pending technology built for healthcare‑grade privacy"
   items={[
     {
       title: 'Zero Raw Data-Retention',
-      description: 'Process sensitive inputs in volatile memory only—no storage, no risks.',
+      description: 'No raw inputs ever touch disk. Only anonymised deltas persist.',
       icon: 'tabler:shield-lock',
     },
     {
@@ -98,22 +98,23 @@ const metadata = {
 
  <!-- Benefits Section -->
 <Features2
+  id="benefits"
   title="Value Proposition"
-  subtitle="Why healthcare providers choose Epheia"
+  subtitle="Why healthcare providers are exploring Epheia"
   tagline="Benefits"
   items={[
     {
-      title: 'Minimize Breaches',
-      description: 'Eliminate raw data vulnerabilities in ethical workflows.',
+      title: 'Minimizes Breaches',
+      description: 'Our zero‑retention design aims to eliminate raw data vulnerabilities in ethical workflows.',
       icon: 'tabler:shield-check',
     },
     {
-      title: 'Build Patient Trust',
+      title: 'Builds Patient Trust',
       description: 'Adaptive AI designed for privacy-first medicine.',
       icon: 'tabler:users',
     },
     {
-      title: 'Accelerate Care',
+      title: 'Accelerates Care',
       description: 'Real-time, compliant insights for faster ethical decisions.',
       icon: 'tabler:rocket',
     },
@@ -130,20 +131,14 @@ const metadata = {
 
   <CallToAction
   id="contact"
-  title="Ready to pioneer ethical AI in medicine?"
-  subtitle="Let's connect—or sign up for updates on our upcoming consumer app."
+  title="Ready to Pioneer Ethical AI In Medicine?"
+  subtitle="Let's connect—or sign up for updates on our upcoming consumer app"
   actions={[
     {
       variant: 'primary',
       text: 'Contact Us',
-      href: 'mailto:contact@epheia.com',
+      href: '/contact',
       icon: 'tabler:mail',
-    },
-    {
-      variant: 'secondary',
-      text: 'Join MindGuard Waitlist',
-      href: '#newsletter',
-      icon: 'tabler:bell',
     },
   ]}
   classes={{

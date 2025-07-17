@@ -10,14 +10,61 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
-  <!-- HeroText Widget ******************* -->
+  <style>
+    /* Override colors for this specific page */
+    /* For the CONTACT tagline */
+    :global(.text-blue-600),
+    :global(.text-secondary),
+    :global(.dark\:text-blue-200) {
+      color: #6b7280 !important; /* Gray */
+    }
+    
+    /* For titles and headings */
+    :global(h1),
+    :global(h2),
+    :global(.text-4xl),
+    :global(.text-5xl),
+    :global(.font-heading) {
+      color: #1e3a5f !important; /* Navy */
+    }
+    
+    /* Specific overrides for known classes */
+    :global(.text-accent) {
+      color: #6b7280 !important;
+    }
+  </style>
 
-  <HeroText tagline="Contact" title="Let's Connect!" />
+
+  
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    tagline="CONNECT WITH EPHEIA"
+  title="Ready to explore privacy-first healthcare AI?"
+    items={[
+     {
+        title: 'Healthcare Partnerships',
+        description: 'Interested in implementing zero-retention AI in your healthcare organization? Let\'s discuss how Epheia can enhance your patient privacy and data security.',
+        icon: 'tabler:stethoscope',
+      },
+      {
+        title: 'Technology Inquiries',
+        description: 'Have questions about our ephemeral AI framework, patent-pending technology, or integration possibilities? We are ready to help.',
+        icon: 'tabler:cpu',
+      },
+      {
+        title: 'MindGuard Preview',
+        description: 'Want to learn more about our upcoming consumer mental health app or join our beta testing program? We\'d love to hear from you.',
+        icon: 'tabler:brain',
+      },
+    ]}
+  />
 
   <ContactUs
     id="form"
     title="Drop us a message today!"
-    subtitle="For quicker answers, explore our FAQs section. You may find the solution you're looking  for right there! If not, our support team is delighted to help you."
+    subtitle="Send us a message and our team will get back to you promptly."
     inputs={[
       {
         type: 'text',
@@ -38,42 +85,5 @@ const metadata = {
         'By submitting this contact form, you acknowledge and agree to the collection of your personal information.',
     }}
     description="Our support team typically responds within 24 business hours."
-  />
-
-  <!-- Features2 Widget ************** -->
-
-  <Features2
-    title="We are here to help!"
-    items={[
-      {
-        title: 'General support',
-        description: `Chat with us for inquiries related to account management, website navigation, payment issues, accessing purchased templates or general questions about the website's functionality.`,
-      },
-      {
-        title: 'Contact sales',
-        description:
-          'Chat with us for questions about purchases, customization options, licensing for commercial use, inquiries about specific template, etc.',
-      },
-      {
-        title: 'Technical support',
-        description:
-          'Chat with us when facing issues like template installation, problems editing difficulties, compatibility issues with software or download errors, or other technical challenges related to using the templates.',
-      },
-      {
-        title: 'Phone',
-        description: '+1 (234) 567-890',
-        icon: 'tabler:headset',
-      },
-      {
-        title: 'Email',
-        description: 'contact@support.com',
-        icon: 'tabler:mail',
-      },
-      {
-        title: 'Location',
-        description: '1234 Lorem Ipsum St, 12345, Miami, EEUU',
-        icon: 'tabler:map-pin',
-      },
-    ]}
   />
 </Layout>
