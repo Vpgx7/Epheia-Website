@@ -122,8 +122,8 @@ export const footerData = {
   links: [],
   secondaryLinks: [],
   socialLinks: [
-    { ariaLabel: 'LinkedIn', icon: 'tabler:brand-linkedin', href: 'YOUR_LINKEDIN_URL' },
-    { ariaLabel: 'X', icon: 'tabler:brand-x', href: 'YOUR_X_URL' },
+    { ariaLabel: 'LinkedIn', icon: 'tabler:brand-linkedin', href: 'https://www.linkedin.com/in/vincent-giacomo' },
+    { ariaLabel: 'X', icon: 'tabler:brand-x', href: 'https://x.com/epheiaai?s=21&t=ilfdQ3AaaMK_1aro6wuhwg' },
   ],
   footNote: `© 2025 Epheia Inc. • Epheia™ is a trademark of Epheia Inc.`,
 };
