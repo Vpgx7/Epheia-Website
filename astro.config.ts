@@ -23,7 +23,10 @@ const whenExternalScripts = (items: (() => AstroIntegration) | (() => AstroInteg
 
 export default defineConfig({
   output: 'static',
-
+  
+  // ADD THIS LINE - Replace with your actual domain
+  site: 'https://epheia.ai',
+  
   integrations: [
     tailwind({
       applyBaseStyles: false,
