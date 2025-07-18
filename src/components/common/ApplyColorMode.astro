@@ -1,34 +1,38 @@
 ---
 import { UI } from 'astrowind:config';
-
-// TODO: This code is temporary
 ---
 
 <script is:inline define:vars={{ defaultTheme: UI.theme || 'system' }}>
-  function applyTheme(theme) {
-    if (theme === 'dark') {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
+  // Force light mode always
+  function forceTheme() {
+    // Remove dark class
+    document.documentElement.classList.remove('dark');
+    
+    // Set color scheme to light
+    document.documentElement.style.colorScheme = 'light';
+    
+    // Clear any stored theme preference
+    localStorage.removeItem('theme');
+    
+    // Update any theme toggle switches to reflect light mode
     const matches = document.querySelectorAll('[data-aw-toggle-color-scheme] > input');
-
     if (matches && matches.length) {
       matches.forEach((elem) => {
-        elem.checked = theme !== 'dark';
+        elem.checked = true; // true = light mode for most toggle implementations
       });
     }
   }
-
-  // Force light mode always
-  applyTheme('light');
   
-  // Override any localStorage settings
-  if (localStorage.theme) {
-    localStorage.removeItem('theme');
+  // Apply immediately
+  forceTheme();
+  
+  // Also apply after DOM is loaded to catch any late changes
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', forceTheme);
   }
   
-  // Ensure light mode persists
-  document.documentElement.classList.remove('dark');
-  document.documentElement.style.colorScheme = 'light';
+  // Prevent any theme changes
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+    forceTheme();
+  });
 </script>
